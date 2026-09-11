@@ -1,9 +1,9 @@
-# Album Cover Downloader
+# 🎵 Album Cover Downloader
 
 Aplicação Python para buscar a capa de um álbum na API pública do iTunes e
 baixá-la em alta resolução.
 
-## O que a aplicação faz
+## ✨ O que a aplicação faz
 
 1. Solicita o nome do álbum.
 2. Solicita o nome do artista ou da banda.
@@ -15,17 +15,19 @@ baixá-la em alta resolução.
 	 sublinhados, por exemplo `The_Dark_Side_of_the_Moon.jpg`.
 7. Tenta abrir o arquivo automaticamente no Windows.
 
-## Requisitos
+## 📋 Requisitos
 
 - Python `3.14` ou superior;
 - [uv](https://docs.astral.sh/uv/);
 - acesso à internet;
 - Windows para a abertura automática da imagem após o download.
 
-A aplicação usa somente a biblioteca padrão do Python e não possui
-dependências externas de runtime.
+O projeto declara `requests>=2.34.2` como dependência de runtime. Essa
+dependência é instalada automaticamente pelo `uv` e registrada no `uv.lock`.
+O código atual da aplicação ainda realiza as requisições usando módulos da
+biblioteca padrão do Python.
 
-## Instalação
+## ⚙️ Instalação
 
 Clone o repositório e entre na pasta do projeto:
 
@@ -43,7 +45,13 @@ uv sync
 O arquivo `.python-version` informa a versão `3.14`. O `uv` pode criar e
 atualizar automaticamente o ambiente `.venv` durante a sincronização.
 
-## Uso
+Para conferir as dependências instaladas no ambiente:
+
+```bash
+uv pip list
+```
+
+## 🚀 Uso
 
 Execute o arquivo principal a partir da raiz do projeto:
 
@@ -68,7 +76,7 @@ Quando houver uma correspondência, a capa será salva na pasta em que o
 comando foi executado. Para evitar substituir outro arquivo, mova ou renomeie
 a imagem depois do download.
 
-## Resultado da busca
+## 🔎 Resultado da busca
 
 Se o iTunes não encontrar uma capa cujo artista e álbum coincidam exatamente,
 o programa exibe:
@@ -80,7 +88,7 @@ Nenhua capa encontrada correspondente.
 Confira a grafia do álbum e do artista. O programa não escolhe resultados
 aproximados e não solicita confirmação antes de salvar o arquivo.
 
-## Limitações conhecidas
+## ⚠️ Limitações conhecidas
 
 - O resultado precisa corresponder exatamente ao álbum e ao artista
 	informados.
@@ -93,7 +101,7 @@ aproximados e não solicita confirmação antes de salvar o arquivo.
 - Erros de rede, respostas inválidas e outras exceções são apenas exibidos no
 	terminal.
 
-## Estrutura do projeto
+## 📁 Estrutura do projeto
 
 ```text
 album-cover-downloader/
@@ -105,7 +113,7 @@ album-cover-downloader/
 └── README.md            # documentação
 ```
 
-## Solução de problemas
+## 🛠️ Solução de problemas
 
 ### `uv` não foi encontrado
 
@@ -127,20 +135,29 @@ resposta do iTunes.
 Verifique se o arquivo `.jpg` foi criado na pasta atual e abra-o manualmente.
 Esse comportamento automático depende do Windows.
 
-## Desenvolvimento
+## 📝 Próximos passos
 
-O código da aplicação está em `src/main.py`. Depois de fazer alterações,
-execute novamente o comando da seção **Uso**. Ao adicionar funcionalidades,
-considere incluir testes e tratamento específico para falhas de rede e buscas
-sem resultados.
+### 🔄 Fase 1: Atualização de Ecossistema e Dependências
 
-## Observação sobre o comando instalado
+Atualizar as ferramentas, a versão do Python e as dependências do projeto,
+mantendo o ambiente reproduzível e documentado.
 
-O `pyproject.toml` declara o comando `album-cover-downloader`, mas a entrada
-configurada aponta para `album_cover_downloader:main`, enquanto o código atual
-está em `src/main.py`. Por isso, use a execução direta documentada acima até
-que essa configuração seja alinhada ao layout do projeto.
+### 🧱 Fase 2: Arquitetura e Modularização (Clean Code)
 
-## Licença
+Separar a entrada da aplicação, a consulta à API, o processamento dos dados e
+o download das imagens em módulos com responsabilidades bem definidas.
+
+### 🔒 Fase 3: Tratamento de Erros e Segurança
+
+Adicionar validação das entradas, tratamento específico para falhas de rede,
+respostas inválidas e ausência de resultados, além de tornar a criação dos
+nomes de arquivo mais segura.
+
+### 🖥️ Fase 4: Portabilidade Multiplataforma
+
+Adaptar a execução e a abertura das imagens para Windows, macOS e Linux,
+evitando dependências de APIs específicas de um único sistema operacional.
+
+## 📄 Licença
 
 Este projeto ainda não declara uma licença.

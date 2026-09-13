@@ -4,17 +4,15 @@ import json
 import os
 
 from data_entry import data_entry
+from fetch_album_api import fetch_album_api
 
 def main():
-
     try:
         data = data_entry()
         album = data['album']
         artist = data['artist']
 
-        searchTerm = urllib.parse.quote(f'{album} {artist}')
-        
-        url = f"https://itunes.apple.com/search?term={searchTerm}&media=music&entity=song"
+        url = fetch_album_api(data)
 
         img_url = None
 

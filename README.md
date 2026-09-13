@@ -144,9 +144,9 @@ o download das imagens em módulos com responsabilidades bem definidas
 
 todo:
 - [x]	entrada
-- [ ]	consulta à API
+- [x]	consulta à API
 - [ ]	processamento dos dados
-- [ ]	download das imagens
+- [ ]	download das imagens e apresentar ao usuário
 
 ### 🔒 Tratamento de Erros e Segurança
 

@@ -3,13 +3,16 @@ import urllib.parse
 import json
 import os
 
+from data_entry import data_entry
+
 def main():
 
     try:
-        album = input("Insira o nome do album: ")
-        artst = input("De qual artista/banda: ")
+        data = data_entry()
+        album = data['album']
+        artist = data['artist']
 
-        searchTerm = urllib.parse.quote(f'{album} {artst}')
+        searchTerm = urllib.parse.quote(f'{album} {artist}')
         
         url = f"https://itunes.apple.com/search?term={searchTerm}&media=music&entity=song"
 
@@ -20,7 +23,7 @@ def main():
 
             for item in data.get('results', []):
                 if (
-                    item.get('artistName', '').strip().lower() == artst.strip().lower()
+                    item.get('artistName', '').strip().lower() == artist.strip().lower()
                     and item.get("collectionName", "").strip().lower() == album.strip().lower()
                 ):
                     

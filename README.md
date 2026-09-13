@@ -137,23 +137,24 @@ Esse comportamento automático depende do Windows.
 
 ## 📝 Próximos passos
 
-### 🔄 Fase 1: Atualização de Ecossistema e Dependências
-
-Atualizar as ferramentas, a versão do Python e as dependências do projeto,
-mantendo o ambiente reproduzível e documentado.
-
-### 🧱 Fase 2: Arquitetura e Modularização (Clean Code)
+### 🧱 Arquitetura e Modularização (Clean Code)
 
 Separar a entrada da aplicação, a consulta à API, o processamento dos dados e
-o download das imagens em módulos com responsabilidades bem definidas.
+o download das imagens em módulos com responsabilidades bem definidas
 
-### 🔒 Fase 3: Tratamento de Erros e Segurança
+todo:
+- [x]	entrada
+- [ ]	consulta à API
+- [ ]	processamento dos dados
+- [ ]	download das imagens
+
+### 🔒 Tratamento de Erros e Segurança
 
 Adicionar validação das entradas, tratamento específico para falhas de rede,
 respostas inválidas e ausência de resultados, além de tornar a criação dos
 nomes de arquivo mais segura.
 
-### 🖥️ Fase 4: Portabilidade Multiplataforma
+### 🖥️ Portabilidade Multiplataforma
 
 Adaptar a execução e a abertura das imagens para Windows, macOS e Linux,
 evitando dependências de APIs específicas de um único sistema operacional.
@@ -161,3 +162,4 @@ evitando dependências de APIs específicas de um único sistema operacional.
 ## 📄 Licença
 
 Este projeto ainda não declara uma licença.
+

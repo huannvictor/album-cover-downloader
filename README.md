@@ -142,11 +142,11 @@ Esse comportamento automático depende do Windows.
 Separar a entrada da aplicação, a consulta à API, o processamento dos dados e
 o download das imagens em módulos com responsabilidades bem definidas
 
-todo:
+**TODO:**
 - [x]	entrada
 - [x]	consulta à API
-- [ ]	processamento dos dados
-- [ ]	download das imagens e apresentar ao usuário
+- [x]	processamento dos dados
+	- [ ]	salvamento das imagens para cada SO
 
 ### 🔒 Tratamento de Erros e Segurança
 

@@ -10,6 +10,4 @@ def fetch_album_api(data: DataEntyType) -> str:
 
     url = f'https://itunes.apple.com/search?term={searchTerm}&media=music&entity=song'
 
-    print(f'método: fetch_album_api; url: {url}')
-
     return url

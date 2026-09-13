@@ -3,6 +3,7 @@ import urllib.request
 import json
 
 from data_entry import DataEntyType
+from open_img import open_img
 
 def process_data(url: str, album_data: DataEntyType):
     img_url = None
@@ -28,8 +29,8 @@ def process_data(url: str, album_data: DataEntyType):
 
                     urllib.request.urlretrieve(img_url, file_name)
 
-                    os.startfile(file_name)
-
+                    open_img(file_name)
+                    
                     break
 
         if not img_url:

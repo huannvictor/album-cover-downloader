@@ -146,7 +146,7 @@ o download das imagens em módulos com responsabilidades bem definidas
 - [x]	entrada
 - [x]	consulta à API
 - [x]	processamento dos dados
-	- [ ]	salvamento das imagens para cada SO
+	- [x]	salvamento das imagens para cada SO
 
 ### 🔒 Tratamento de Erros e Segurança
 
@@ -154,10 +154,6 @@ Adicionar validação das entradas, tratamento específico para falhas de rede,
 respostas inválidas e ausência de resultados, além de tornar a criação dos
 nomes de arquivo mais segura.
 
-### 🖥️ Portabilidade Multiplataforma
-
-Adaptar a execução e a abertura das imagens para Windows, macOS e Linux,
-evitando dependências de APIs específicas de um único sistema operacional.
 
 ## 📄 Licença
 

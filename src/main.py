@@ -13,7 +13,7 @@ def main():
         process_data(url, album_data)
 
     except Exception as e:
-        print(f'Ocorreu um erro: {e}')
+        print(f"Ocorreu um erro: {e}")
 
 
 if __name__ == "__main__":

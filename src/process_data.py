@@ -11,21 +11,18 @@ def process_data(url: str, album_data: DataEntyType):
     with urllib.request.urlopen(url) as response:
         data = json.load(response)
 
-        for item in data.get('results', []):
+        for item in data.get("results", []):
             if (
-                item.get('artistName', '').strip().lower() == album_data['artist'].strip().lower()
-                and item.get('collectionName', '').strip().lower() == album_data['album'].strip().lower()
+                item.get("artistName", "").strip().lower() == album_data["artist"].strip().lower()
+                and item.get("collectionName", "").strip().lower() == album_data["album"].strip().lower()
             ):
                 # if the data match, return the image URL
-                img_url = item.get('artworkUrl100')
-                print(f'{album_data["album"]}')
+                img_url = item.get("artworkUrl100")
 
                 if img_url:
-                    img_url = img_url.rsplit('/', 1)[0] + '/1000x1000.jpg'
+                    img_url = img_url.rsplit("/", 1)[0] + "/1000x1000.jpg"
 
-                    print(f'{img_url}')
-
-                    file_name = f'{album_data["album"].replace(' ', '_')}.jpg'
+                    file_name = f"{album_data["album"].replace(" ", "_")}.jpg"
 
                     urllib.request.urlretrieve(img_url, file_name)
 
@@ -34,4 +31,4 @@ def process_data(url: str, album_data: DataEntyType):
                     break
 
         if not img_url:
-            print('Nenhuma capa encontrada')
+            print("Nenhuma capa encontrada")

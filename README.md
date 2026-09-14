@@ -150,9 +150,10 @@ o download das imagens em módulos com responsabilidades bem definidas
 
 ### 🔒 Tratamento de Erros e Segurança
 
-Adicionar validação das entradas, tratamento específico para falhas de rede,
-respostas inválidas e ausência de resultados, além de tornar a criação dos
-nomes de arquivo mais segura.
+**TODO:**
+- []	Adicionar validação das entradas
+- []	Adicionar tratamento específico para falhas de rede, respostas inválidas e ausência de resultados
+- []	Tornar a criação dos nomes de arquivo mais segura
 
 
 ## 📄 Licença
